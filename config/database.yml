@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+  username: postgres
+  password: root
+  host: localhost
+development:
+  <<: *default
+  database: popup_dev
+test:
+  <<: *default
+  database: popup_test
+production:
+  <<: *default
+  database: popup_pro
